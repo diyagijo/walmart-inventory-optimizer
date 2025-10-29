@@ -19,8 +19,8 @@ Retail clients constantly struggle to balance the high cost of overstocking with
 2.  **Optimize:** The forecast's uncertainty is used to calculate a full inventory policy (Reorder Point, Safety Stock, EOQ) that is optimized to meet a specific **Service Level**.
 3.  **Deploy:** The entire model is deployed as an interactive Streamlit dashboard where a "store manager" can run what-if scenarios to see the exact cost/risk trade-offs of their decisions.
 
-![Dashboard Screenshot 1](httpsEntry-image-URL-here)
-![Dashboard Screenshot 2](Entry-image-URL-here)
+![Dashboard Screenshot 1](dashboard_main.png)
+![Dashboard Screenshot 2](d2.png)
 
 ## 🔧 How to Run Locally
 
