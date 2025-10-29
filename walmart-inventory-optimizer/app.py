@@ -3,11 +3,14 @@ import streamlit as st
 import plotly.graph_objects as go
 from prophet.plot import plot_components_plotly
 
-# --- THIS IS THE FIX ---
-# This tells Python to look in the current folder for the 'modules' directory
+
+# This adds the *parent* directory (the root of your repo) to the Python path
+# This allows app.py to find the 'modules' and 'data' folders.
 import sys
 import os
-sys.path.append(os.path.dirname(__file__))
+CURRENT_DIR = os.path.dirname(__file__)
+PARENT_DIR = os.path.abspath(os.path.join(CURRENT_DIR, os.pardir))
+sys.path.append(PARENT_DIR)
 # --- END OF FIX ---
 
 # Import your modules
@@ -98,7 +101,12 @@ st.markdown(CSS_STYLE, unsafe_allow_html=True)
 
 
 # --- Data Loading ---
-df, store_list, dept_list = data_loader.load_data()
+# --- THIS IS ALSO FIXED ---
+# We tell the data loader to look for the 'data' folder in the parent directory
+DATA_PATH = os.path.join(PARENT_DIR, 'data/')
+df, store_list, dept_list = data_loader.load_data(data_path=DATA_PATH)
+# --- END OF FIX ---
+
 if df is None:
     st.stop()
 
@@ -204,3 +212,4 @@ if st.sidebar.button("Run Analysis", type="primary"):
 
 else:
     st.info("Select your item and parameters in the sidebar, then click 'Run Analysis'.")
+
