@@ -6,6 +6,9 @@ from prophet.plot import plot_components_plotly
 # Import your modules
 from modules import data_loader, forecasting, optimization
 import config
+import sys
+import os
+sys.path.append(os.path.dirname(__file__))
 
 # --- Page Configuration ---
 st.set_page_config(
@@ -199,4 +202,5 @@ if st.sidebar.button("Run Analysis", type="primary"):
 
 else:
     st.info("Select your item and parameters in the sidebar, then click 'Run Analysis'.")
+
 
