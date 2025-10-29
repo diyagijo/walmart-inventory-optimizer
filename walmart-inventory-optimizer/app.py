@@ -3,12 +3,16 @@ import streamlit as st
 import plotly.graph_objects as go
 from prophet.plot import plot_components_plotly
 
-# Import your modules
-from modules import data_loader, forecasting, optimization
-import config
+# --- THIS IS THE FIX ---
+# This tells Python to look in the current folder for the 'modules' directory
 import sys
 import os
 sys.path.append(os.path.dirname(__file__))
+# --- END OF FIX ---
+
+# Import your modules
+from modules import data_loader, forecasting, optimization
+import config
 
 # --- Page Configuration ---
 st.set_page_config(
@@ -17,9 +21,7 @@ st.set_page_config(
     layout="wide"
 )
 
-
-# We inject custom CSS with st.markdown() 
-
+# --- Custom CSS for "Sleek" Look ---
 CSS_STYLE = """
 <style>
 /* --- Main App Styling --- */
@@ -202,5 +204,3 @@ if st.sidebar.button("Run Analysis", type="primary"):
 
 else:
     st.info("Select your item and parameters in the sidebar, then click 'Run Analysis'.")
-
-
