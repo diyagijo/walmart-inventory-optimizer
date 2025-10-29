@@ -1,5 +1,5 @@
-# walmart-inventory-optimizer
-# 🛒 Retail Demand Forecast & Inventory Optimizer
+
+#  Retail Demand Forecast & Inventory Optimizer
 
 This is an end-to-end analytics tool that moves from prediction (forecasting sales) to prescription (optimizing inventory). It's built in Python using Prophet and Streamlit.
 
@@ -18,7 +18,8 @@ Retail clients constantly struggle to balance the high cost of overstocking with
 1.  **Forecast:** A time-series model (Prophet) forecasts weekly sales, capturing seasonality and the impact of external drivers like temperature and holidays.
 2.  **Optimize:** The forecast's uncertainty is used to calculate a full inventory policy (Reorder Point, Safety Stock, EOQ) that is optimized to meet a specific **Service Level**.
 3.  **Deploy:** The entire model is deployed as an interactive Streamlit dashboard where a "store manager" can run what-if scenarios to see the exact cost/risk trade-offs of their decisions.
-
+### 📸 Dashboard Screenshots
+Here is the tool in action, showing the clear, actionable recommendations:
 ![Dashboard Screenshot 1](dashboard_main.png)
 ![Dashboard Screenshot 2](d2.png)
 
