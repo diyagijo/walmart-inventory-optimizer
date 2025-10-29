@@ -45,7 +45,6 @@ Here is the tool in action, showing the clear, actionable recommendations:
     ```
 
 ---
-*(Note: The full `train.csv` (420MB) is not included. A sample of the data is used in the `data/` folder for demonstration.)*
 
 
     
