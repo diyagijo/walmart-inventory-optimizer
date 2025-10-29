@@ -1,41 +1,50 @@
 # walmart-inventory-optimizer
-# Retail Demand Forecasting & Inventory Optimization
+# 🛒 Retail Demand Forecast & Inventory Optimizer
 
-This project builds an end-to-end tool to forecast retail sales and calculate an optimal inventory policy (Reorder Point & Economic Order Quantity).
+This is an end-to-end analytics tool that moves from prediction (forecasting sales) to prescription (optimizing inventory). It's built in Python using Prophet and Streamlit.
 
-The tool uses the Kaggle "Walmart Store Sales Forecasting" dataset.
+## 🚀 Live Application
 
-## Project Structure
+**[Link to your deployed Streamlit app will go here once it's live]**
 
--   `/data/`: Contains the raw Kaggle CSV files.
--   `/modules/`: Contains the core Python logic:
-    -   `data_loader.py`: Loads and merges data.
-    -   `forecasting.py`: Runs the Prophet forecast.
-    -   `optimization.py`: Calculates the inventory policy.
--   `app.py`: The main Streamlit application file.
--   `config.py`: Default configuration and business inputs.
--   `requirements.txt`: Required Python packages.
+## 💡 The Business Problem
 
-## How to Run
+Retail clients constantly struggle to balance the high cost of overstocking with the lost sales from stockouts. This tool provides a data-driven solution by answering two key questions:
+1.  **When** should we reorder?
+2.  **How much** should we reorder?
+
+## 🛠️ How It Works
+
+1.  **Forecast:** A time-series model (Prophet) forecasts weekly sales, capturing seasonality and the impact of external drivers like temperature and holidays.
+2.  **Optimize:** The forecast's uncertainty is used to calculate a full inventory policy (Reorder Point, Safety Stock, EOQ) that is optimized to meet a specific **Service Level**.
+3.  **Deploy:** The entire model is deployed as an interactive Streamlit dashboard where a "store manager" can run what-if scenarios to see the exact cost/risk trade-offs of their decisions.
+
+![Dashboard Screenshot 1](httpsEntry-image-URL-here)
+![Dashboard Screenshot 2](Entry-image-URL-here)
+
+## 🔧 How to Run Locally
 
 1.  **Clone the repository:**
     ```bash
-    git clone [your-repo-url]
-    cd walmart_inventory_project
+    git clone [https://github.com/diyagijo/walmart-inventory-optimizer.git](https://github.com/diyagijo/walmart-inventory-optimizer.git)
+    cd walmart-inventory-optimizer
     ```
-
-2.  **Download the data:**
-    Download `train.csv`, `features.csv`, and `stores.csv` from the [Kaggle Walmart competition](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting) and place them in the `/data/` folder.
-
+2.  **Create and activate a virtual environment:**
+    ```bash
+    python -m venv venv
+    .\venv\Scripts\activate
+    ```
 3.  **Install dependencies:**
     ```bash
     pip install -r requirements.txt
     ```
-
-4.  **Run the Streamlit app:**
+4.  **Run the app:**
     ```bash
     streamlit run app.py
     ```
+
+---
+*(Note: The full `train.csv` (420MB) is not included. A sample of the data is used in the `data/` folder for demonstration.)*
 
 
     
