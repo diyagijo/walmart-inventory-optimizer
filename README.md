@@ -5,7 +5,7 @@ This is an end-to-end analytics tool that moves from prediction (forecasting sal
 
 ## 🚀 Live Application
 
-**[[Link to your deployed Streamlit app will go here once it's live](https://walmart-inventory-optimizer-fnfe3twwjatvyuasbw4r7y.streamlit.app/)]**
+**[[Walmart-inventory-optmizer-deployed](https://walmart-inventory-optimizer-fnfe3twwjatvyuasbw4r7y.streamlit.app/)]**
 
 ## 💡 The Business Problem
 
